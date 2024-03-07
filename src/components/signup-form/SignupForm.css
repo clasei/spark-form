@@ -1,0 +1,43 @@
+.signup-form {
+    text-align: center;
+    padding: 2rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+  }
+  
+  .signup-text {
+    margin-bottom: 1rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #ffffff;
+  }
+  
+  .signup-input {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 25px;
+    border: 1px solid #00c1db;
+    width: 50%;
+  }
+  
+  .signup-button {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 7px;
+    background-color: #ff1900;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #37e091;
+  }
