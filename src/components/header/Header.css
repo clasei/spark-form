@@ -1,0 +1,21 @@
+.main-title {
+    font-family: "Lobster", sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    color: #f7f7f7;
+    text-shadow: #1ed0fd 1px 3px 5px;
+    background-color: #15007f48;
+    font-weight: 700;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 3;
+  }
+
+  @media (max-width: 768px) {
+    .main-title {
+        font-size: 4rem;
+        padding: 1rem;
+      }
+  }

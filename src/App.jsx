@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import { } from 'react'
 import Background from './components/background/Background'
+import Header from './components/header/Header'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
         <Background />
+          <div>
+            <Header />
+          </div>
       </div>
     </>
   )
