@@ -8,6 +8,8 @@
     animation: gradient 20s ease infinite;
     background-size: 250% 250%;
     background-attachment: fixed;
+    position: fixed;
+    z-index: -2;
 }
 
 @keyframes gradient {
