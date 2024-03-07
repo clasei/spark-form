@@ -3,9 +3,14 @@ import './SignupForm.css';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
+  const [isAgreed, setIsAgreed] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!isAgreed) {
+        alert('Please agree to the privacy policy.');
+        return;
+      }
 
     console.log(email);
   };
@@ -25,6 +30,15 @@ const SignupForm = () => {
       <div>
         <button type="submit" className="signup-button">I'm all in</button>
       </div>
+
+      <label className="privacy-policy">
+        <input 
+          type="checkbox" 
+          checked={isAgreed}
+          onChange={(e) => setIsAgreed(e.target.checked)}
+        />
+        I agree to the <a href="https://dobeesdream.com/politica-de-privacidad/" target="_blank"> Privacy Policy</a>
+      </label>
       
     </form>
   );

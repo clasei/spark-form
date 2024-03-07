@@ -1,0 +1,45 @@
+#footer {
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(194, 194, 194, 0.902);
+    font-size: 0.75rem;
+    background-color: rgba(0, 7, 104, 0.65);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.685);
+    padding: 1rem 3rem;
+    margin: 0.75rem 1rem;
+    border-radius: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    bottom: 0;
+    position: fixed; 
+    width: 95%;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(94, 160, 255);
+    margin: 2px;
+    transition: color 0.5s;
+}
+
+footer a:hover {
+    color: rgb(10, 112, 255);
+    background-color: #fce149;;
+    font-weight: bold;
+}
+
+footer span {
+    margin: 0 0;
+}
+
+#rocketIcon {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    #footer {
+        margin: 0.5rem 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
