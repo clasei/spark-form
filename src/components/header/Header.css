@@ -1,17 +1,19 @@
 .main-title {
+    font-family: "Lobster", sans-serif;
     font-size: 3rem;
     text-align: center;
-    margin: 1rem 0;
-    color: #333;
-    background-color: #f7f7f75f;
+    margin: 0;
+    padding: 1rem;
+    color: #f7f7f7;
+    background-color: #f7f7f74d;
     font-weight: 700;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     position: relative;
     z-index: 3;
   }
 
   @media screen {
     .main-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
   }
