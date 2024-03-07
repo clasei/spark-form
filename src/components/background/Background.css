@@ -10,6 +10,7 @@
     background-attachment: fixed;
     position: fixed;
     z-index: -2;
+    overflow: hidden;
 }
 
 @keyframes gradient {
