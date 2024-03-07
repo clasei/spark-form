@@ -79,6 +79,7 @@
 
     .signup-text, .signup-input, .signup-button {
         font-size: 1rem;
+        line-height: 1.75rem;
     }
 
     .signup-input {
@@ -88,6 +89,6 @@
       }
 
       .signup-button {
-        margin-top: 1rem;
+        margin-bottom: 1.5rem;
       }
   }
