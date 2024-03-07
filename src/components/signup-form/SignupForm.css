@@ -49,6 +49,7 @@
 
   .privacy-policy {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 0.8rem;
     color: #f7f7f7;
   }
@@ -68,9 +69,9 @@
   }
 
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .signup-text {
-        margin-top: 2rem;
+        margin-top: 0.75rem;
         margin-bottom: 0.75rem;
       }
 
@@ -79,7 +80,7 @@
     }
 
     .signup-input {
-        margin: 1rem auto;
+        margin: 0.75rem auto;
         padding: 1rem;
         width: 85%;
       }

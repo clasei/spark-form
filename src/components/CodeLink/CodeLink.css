@@ -7,14 +7,16 @@
     z-index: 1;
     color: #444;
     transition: scale 1s ease-out;
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 3px 10px rgba(95, 95, 95, 0.5);
+    background-color: rgba(0, 7, 104, 0.654);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.685);
     padding: 1rem 0.25rem;
     margin: 3rem auto;
     border-radius: 25px; 
     width: 15rem;
     position: relative;
     bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .code-link-container:hover {
@@ -41,7 +43,7 @@
 
 .code-link-container a:hover {
     text-decoration: none;
-    color: rgb(10, 112, 255);
+    color: #fce149;
 }
 
 .code-link {
@@ -49,4 +51,11 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+    .code-link-container {
+        padding: 0.75rem 0.1rem;
+        margin-top: 1rem;
+    }
 }
