@@ -9,11 +9,12 @@
     transition: scale 1s ease-out;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 3px 10px rgba(95, 95, 95, 0.5);
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.25rem;
     margin: 3rem auto;
     border-radius: 25px; 
     width: 15rem;
     position: relative;
+    bottom: 0;
 }
 
 .code-link-container:hover {

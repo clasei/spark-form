@@ -12,12 +12,12 @@ function App() {
     <>
       <div>
         <Background />
-          <div>
+          <div className="content">
             <Header />
             <SignupForm />
             <CodeLink />
+            <Footer />
           </div>
-          <Footer />
       </div>
     </>
   )
