@@ -12,7 +12,7 @@ const SignupForm = () => {
 
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
-      <p className="signup-text">Do bees dream of electric bikes? Let's find out together</p>
+      <p className="signup-text">Do bees dream of electric bikes? Subscribe & let's find out together</p>
       <input 
         type="email" 
         className="signup-input" 

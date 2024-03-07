@@ -1,5 +1,6 @@
 .signup-form {
     text-align: center;
+    align-items: center;
     padding: 2rem;
     font-family: "Comfortaa", sans-serif;
   }
@@ -12,10 +13,13 @@
 }
   
   .signup-text {
+    margin-top: 3rem;
     margin-bottom: 1rem;
+    line-height: 2rem;
   }
   
   .signup-input {
+    color: #232aed;
     margin: 1rem;
     padding: 1rem 2rem;
     border-radius: 25px;
@@ -24,8 +28,8 @@
   }
 
   .signup-input::placeholder {
-    color: #7ecbff;
-    opacity: 1;
+    color: #232aed;
+    opacity: 0.5;
   }
   
   .signup-button {
@@ -45,10 +49,21 @@
 
   @media (max-width: 768px) {
     .signup-text {
+        margin-top: 2rem;
         margin-bottom: 1rem;
       }
 
     .signup-text, .signup-input, .signup-button {
         font-size: 1rem;
     }
+
+    .signup-input {
+        margin: 1rem auto;
+        padding: 1rem;
+        width: 85%;
+      }
+
+      .signup-button {
+        margin-top: 1rem;
+      }
   }
