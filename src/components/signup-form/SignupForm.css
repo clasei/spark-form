@@ -41,10 +41,12 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    transition: scale 1s ease-out;
   }
   
   .signup-button:hover {
     background-color: #19c072;
+    scale: 0.9;
   }
 
   .privacy-policy {
@@ -71,7 +73,7 @@
 
   @media screen and (max-width: 768px) {
     .signup-text {
-        margin-top: 0.75rem;
+        margin-top: 0.25rem;
         margin-bottom: 0.75rem;
       }
 
