@@ -34,6 +34,7 @@
   
   .signup-button {
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
     padding: 1rem 2rem;
     border-radius: 7px;
     background-color: #ff1900;
@@ -46,11 +47,31 @@
     background-color: #19c072;
   }
 
+  .privacy-policy {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #f7f7f7;
+  }
+  
+  .privacy-policy input[type="checkbox"] {
+    margin-right: 1rem;
+    color: aqua;
+  }
+  
+  .privacy-policy a {
+    color: #85e4ff;
+    text-decoration: none;
+  }
+  
+  .privacy-policy a:hover {
+    text-decoration: underline;
+  }
+
 
   @media (max-width: 768px) {
     .signup-text {
         margin-top: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
       }
 
     .signup-text, .signup-input, .signup-button {
