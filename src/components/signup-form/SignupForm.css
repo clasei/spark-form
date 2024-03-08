@@ -50,6 +50,33 @@
     scale: 0.9;
   }
 
+  @keyframes fadeInOut {
+    0% { opacity: 0; visibility: hidden; }
+    10% { opacity: 1; visibility: visible; }
+    90% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+  }
+
+  .submit-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    width: 30%;
+    text-align: center;
+    font-family: "Lobster", sans-serif;
+    padding: 1rem;
+    border-radius: 25px;
+    color: #fce149;
+    background-color: #333;
+    border-color: #f7f7f7;
+    border-style: dotted;
+    font-size: 1.5rem;
+    animation: fadeInOut 5s ease-in-out forwards;
+    z-index: 10;
+  }
+
   .privacy-policy {
     margin-top: 2rem;
     margin-bottom: 2rem;
