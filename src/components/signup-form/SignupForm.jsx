@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './SignupForm.css';
-import db from '/src/firebase.js'; // Asegúrate de que la ruta es correcta
+import db from '/src/firebase.js';
 import { collection, addDoc } from 'firebase/firestore';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
   const [isAgreed, setIsAgreed] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,9 +22,16 @@ const SignupForm = () => {
         createdAt: new Date()
       });
       console.log("Document written with ID: ", docRef.id);
+
+      setEmail('');
+      setIsAgreed(false);
+      setSubmitMessage('Welcome!');
+
+      setTimeout(() => setSubmitMessage(''), 5000);
         
     } catch (e) {
       console.error("Error adding document: ", e);
+      setSubmitStatus({ submitted: true, message: 'There was an error, please try again.' });
     }
   };
 
@@ -51,6 +59,12 @@ const SignupForm = () => {
         />
         I agree to the <a href="https://dobeesdream.com/politica-de-privacidad/" target="_blank"> Privacy Policy</a>
       </label>
+
+      {submitMessage && (
+        <div className="submit-message">
+          {submitMessage}
+        </div>
+      )}
       
     </form>
   );
