@@ -9,12 +9,13 @@
     font-family: "Comfortaa", sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
+    line-height: 2rem;
     color: #ffffff;
 }
   
   .signup-text {
     margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     line-height: 2rem;
   }
   
@@ -73,13 +74,12 @@
 
   @media screen and (max-width: 768px) {
     .signup-text {
-        margin-top: 0.25rem;
-        margin-bottom: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
       }
 
     .signup-text, .signup-input, .signup-button {
         font-size: 1rem;
-        line-height: 1.75rem;
     }
 
     .signup-input {

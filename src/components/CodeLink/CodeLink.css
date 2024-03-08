@@ -9,13 +9,13 @@
     transition: scale 1s ease-out;
     background-color: rgba(0, 7, 104, 0.654);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.685);
-    padding: 1rem 0.25rem;
+    padding: 0.75rem 0.25rem;
     margin: 3rem auto;
     border-radius: 25px; 
     width: 13rem;
     position: relative;
     bottom: 0;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
 }
 
