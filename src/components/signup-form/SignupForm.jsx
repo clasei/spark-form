@@ -1,18 +1,30 @@
 import React, { useState } from 'react';
 import './SignupForm.css';
+import db from '/src/firebase.js'; // Asegúrate de que la ruta es correcta
+import { collection, addDoc } from 'firebase/firestore';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
   const [isAgreed, setIsAgreed] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!isAgreed) {
         alert('Please agree to the privacy policy.');
         return;
       }
 
-    console.log(email);
+    try {
+      const docRef = await addDoc(collection(db, "emails"), {
+        email: email,
+        consent: isAgreed,
+        createdAt: new Date()
+      });
+      console.log("Document written with ID: ", docRef.id);
+        
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
   };
 
   return (
