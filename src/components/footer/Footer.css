@@ -4,13 +4,13 @@
     font-size: x-small;
     background-color: rgba(0, 7, 104, 0.65);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.685);
-    padding: 1rem 3rem;
+    padding: 0.75rem 3rem;
     margin: 0.75rem 1rem;
     border-radius: 13px;
     text-align: center;
     box-sizing: border-box;
     bottom: 0;
-    position: fixed; 
+    position: relative; 
     width: 95%;
 }
 
@@ -40,6 +40,7 @@ footer span {
 @media screen and (max-width: 768px) {
     #footer {
         margin: 0.5rem 0.75rem;
+        margin-bottom: o.5rem;
         padding: 0.5rem 0.75rem;
     }
 }
