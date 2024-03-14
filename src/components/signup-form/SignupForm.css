@@ -63,7 +63,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: visible;
-    width: 30%;
+    width: 50%;
     text-align: center;
     font-family: "Lobster", sans-serif;
     padding: 1.5rem;
@@ -73,7 +73,7 @@
     border-color: #fce149;
     border-style: dotted;
     font-size: 1.75rem;
-    animation: fadeInOut 5s ease-in-out forwards;
+    animation: fadeInOut 4s ease-in-out forwards;
     z-index: 10;
   }
 

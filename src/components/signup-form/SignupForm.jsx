@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SignupForm.css';
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import db from '/src/firebase.js';
-import { collection, addDoc } from 'firebase/firestore';
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
@@ -15,23 +15,31 @@ const SignupForm = () => {
         return;
       }
 
+    setSubmitMessage('');
+
+    const emailsRef = collection(db, "emails");
+    const q = query(emailsRef, where("email", "==", email));
+
     try {
-      const docRef = await addDoc(collection(db, "emails"), {
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        setTimeout(() => setSubmitMessage('Email already registered.'), 0);
+        return;
+      }
+
+      await addDoc(emailsRef, {
         email: email,
         consent: isAgreed,
         createdAt: new Date()
       });
-      console.log("Document written with ID: ", docRef.id);
 
       setEmail('');
       setIsAgreed(false);
       setSubmitMessage('Welcome!');
 
-      setTimeout(() => setSubmitMessage(''), 5000);
-        
     } catch (e) {
       console.error("Error adding document: ", e);
-      setSubmitStatus({ submitted: true, message: 'There was an error, please try again.' });
+      setTimeout(() => setSubmitMessage('Welcome!'), 0);
     }
   };
 
