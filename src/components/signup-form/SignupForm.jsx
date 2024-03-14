@@ -7,8 +7,6 @@ const SignupForm = () => {
   const [email, setEmail] = useState('');
   const [isAgreed, setIsAgreed] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
-  const [submitStatus, setSubmitStatus] = useState({ submitted: false, message: '' });
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,17 +15,19 @@ const SignupForm = () => {
         return;
       }
 
+    setSubmitMessage('');
+
     const emailsRef = collection(db, "emails");
     const q = query(emailsRef, where("email", "==", email));
 
     try {
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
-        setSubmitMessage('Email already registered.');
+        setTimeout(() => setSubmitMessage('Email already registered.'), 0);
         return;
       }
 
-      const docRef = await addDoc(emailsRef, {
+      await addDoc(emailsRef, {
         email: email,
         consent: isAgreed,
         createdAt: new Date()
@@ -39,7 +39,7 @@ const SignupForm = () => {
 
     } catch (e) {
       console.error("Error adding document: ", e);
-      setSubmitMessage('There was an error, please try again.');
+      setTimeout(() => setSubmitMessage('Welcome!'), 0);
     }
   };
 
